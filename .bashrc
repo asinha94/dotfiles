@@ -134,8 +134,6 @@ if ! shopt -oq posix; then
 fi
 
 # Personal Stuff
-alias updir='. /home/asinha/scripts/updir.sh'
-alias eot='cd /home/asinha/p4/depot/dev/asinha/AAA1/SRC/tools/aaa-eot'
 alias lls='ls -I *.*~'
 alias fcount='num=$(lls -1 | wc -l); echo "$num non-temp files"'
 alias ft='cd /opt/rim/aaa-ft/etc/aws-functional-tests/functional/ && ./run-all-tests.sh -o RLYDB01 ASINHA_AAA ASINHA_AAA -v'
