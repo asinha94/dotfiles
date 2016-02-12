@@ -136,8 +136,6 @@ fi
 # Personal Stuff
 alias lls='ls -I *.*~'
 alias fcount='num=$(lls -1 | wc -l); echo "$num non-temp files"'
-alias ft='cd /opt/rim/aaa-ft/etc/aws-functional-tests/functional/ && ./run-all-tests.sh -o RLYDB01 ASINHA_AAA ASINHA_AAA -v'
-alias eotlist='eot && ./run.sh -l'
 alias scd='cd'
 alias sl='ls'
 alias sls='ls'
