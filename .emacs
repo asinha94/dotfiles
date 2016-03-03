@@ -1,10 +1,15 @@
+(add-to-list 'load-path "~/.emacs.d/")
 ;; autocomplete paired brackets
 (electric-pair-mode 1)
 ;;Display Highlighted line numbers
 (global-linum-mode t)
 ;;(global-hl-line-mode t)
+(require 'highlight-symbol)
+(define-globalized-minor-mode my-global-hsmode highlight-symbol-mode (lambda() (highlight-symbol-mode 1) ) ) 
+(my-global-hsmode 1)
+;;(highlight-symbol-mode t)
 ;; Custom theme
-(when window-system (set-frame-size (selected-frame) 79 27))
+(when window-system (set- frame-size (selected-frame) 120 60))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
