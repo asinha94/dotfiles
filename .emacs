@@ -9,7 +9,7 @@
 (my-global-hsmode 1)
 ;;(highlight-symbol-mode t)
 ;; Custom theme
-(when window-system (set- frame-size (selected-frame) 120 60))
+(when window-system (set-frame-size (selected-frame) 120 60))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
