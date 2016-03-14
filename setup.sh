@@ -10,10 +10,6 @@ set -e
 # Install Git first if not already installled because thats where we get emacs themes from
 sudo apt-get install -q=2 git
 
-# Clone Guake repo and install
-git clone https://github.com/Guake/guake
-cd guake && ./dev.sh --install
-
 # Install tmux
 sudo apt-get add ppa:webupd8team/unstable
 sudo apt-get upgrade
@@ -25,6 +21,10 @@ sudo apt-get install emacs
 cp -r .emacs .emacs.d ~/
 
 # Copy bashrc and .bash_aliases
-cp .bashrc .bash_aliases ~/
+cp .bash_aliases ~/
+
+# Clone Guake repo and install
+git clone https://github.com/Guake/guake
+mv guake /opt && /opt/guake/dev.sh --install & # Guake sends logs to STDOUT for some reason
 
 # TODO: Include zsh and oh-my-zsh stuff after I have settled on a decent looking environment
