@@ -20,11 +20,11 @@ cp .tmux.conf ~/
 sudo apt-get install emacs
 cp -r .emacs .emacs.d ~/
 
-# Copy bashrc and .bash_aliases
+# Copy .bash_aliases. Check manually if it is safe to copy bashrc. We don't want to overrite important configurations
 cp .bash_aliases ~/
 
 # Clone Guake repo and install
 git clone https://github.com/Guake/guake
-mv guake /opt && /opt/guake/dev.sh --install & # Guake sends logs to STDOUT for some reason
+mv guake /opt && /opt/guake/dev.sh --install
 
 # TODO: Include zsh and oh-my-zsh stuff after I have settled on a decent looking environment
