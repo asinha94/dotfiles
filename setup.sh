@@ -8,16 +8,16 @@
 set -e
 
 # Install Git first if not already installled because thats where we get emacs themes from
-sudo apt-get install -q=2 git
+sudo apt-get install -y git
 
 # Install tmux
 sudo apt-get add ppa:webupd8team/unstable
 sudo apt-get upgrade
-sudo apt-get install tmux
+sudo apt-get -y install tmux
 cp .tmux.conf ~/
 
 # Install emacs and install custom settings
-sudo apt-get install emacs
+sudo apt-get -y install emacs
 cp -r .emacs .emacs.d ~/
 
 # Copy .bash_aliases. Check manually if it is safe to copy bashrc. We don't want to overrite important configurations
