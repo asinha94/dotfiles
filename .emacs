@@ -17,6 +17,9 @@
 (define-globalized-minor-mode my-global-hsmode highlight-symbol-mode (lambda() (highlight-symbol-mode 1) ) ) 
 (my-global-hsmode 1)
 
+;; Convert tabs to spaces
+(setq-default indent-tabs-mode nil)
+
 ;; Custom theme (when using the GUI)
 (when window-system (set-frame-size (selected-frame) 150 40))
 
