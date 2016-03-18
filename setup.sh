@@ -7,21 +7,18 @@
 # Fail on errors
 set -e
 
-# Install Git first if not already installled because thats where we get emacs themes from
-sudo apt-get install -y git
+# Install tmux. If not in public repositories, add the webupd8team ppa, which has tmux
+if ! sudo apt-get -y install tmux ; then
+    sudo apt-get add ppa:webupd8team/unstable
+    sudo apt-get upgrade
+    sudo apt-get -y Install tmux
+fi
 
-# Install tmux
-sudo apt-get add ppa:webupd8team/unstable
-sudo apt-get upgrade
-sudo apt-get -y install tmux
-cp .tmux.conf ~/
-
-# Install emacs and install custom settings
+# Install emacs
 sudo apt-get -y install emacs
-cp -r .emacs .emacs.d ~/
 
-# Copy .bash_aliases. Check manually if it is safe to copy bashrc. We don't want to overrite important configurations
-cp .bash_aliases ~/
+# Copy all the configuration file to home
+cp -r .bash_aliases .tmux.conf .emacs .emacs.d ~/
 
 # Clone Guake repo and install
 git clone https://github.com/Guake/guake
