@@ -1,10 +1,10 @@
 ;; Top level directory for all pacakges
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; Auto-Complete and dependencies
 (require 'auto-complete-config)
 (ac-config-default)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/dict")
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/lisp/dict")
 
 ;; autocomplete paired brackets
 (electric-pair-mode 1)

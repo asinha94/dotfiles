@@ -7,35 +7,52 @@
 # Fail on errors
 set -e
 
-function update ()
+function copy-configs ()
 {
     cp -r .bash_aliases .tmux.conf .emacs .emacs.d ~/
 }
 
-if [[ $1 == *"update"* ]]; then
-    
-    # Just copy the config files
-    update
-
-else
-
+function install-tmux ()
+{
     # Install tmux. If not in public repositories, add the webupd8team ppa, which has tmux
     if ! sudo apt-get -y install tmux ; then
 	sudo apt-get add ppa:webupd8team/unstable
 	sudo apt-get upgrade
 	sudo apt-get -y Install tmux
     fi
+}
 
-    # Install emacs
+function install-emacs ()
+{
     sudo apt-get -y install emacs
+}
 
-    # Copy all the configuration file to home
-    update
-
+function install-guake ()
+{
     # Clone Guake repo and install
     git clone https://github.com/Guake/guake
-    mv guake /opt && /opt/guake/dev.sh --install
+    mv guake ../ && ../guake/dev.sh --install
+}
 
-    # TODO: Include zsh and oh-my-zsh stuff after I have settled on a decent looking environment
+if [[ $1 == *"update"* ]]; then
+    
+    # Just copy the config files
+    copy-configs
+
+else
+
+    # Install tmuc
+    install-tmux
+    
+    # Install emacs
+    install-emacs
+
+    # Copy all the configuration file to home
+    copy-configs
+    
+    # Install guake
+    install-guake
+    
+    # TODO: Include zsh and oh-my-zsh stuff after I have settled on a decent looking environment and finally fixed that powerline fonts issue
 
 fi
