@@ -1,3 +1,18 @@
+# Run tmux in guake on startup
+run_tmux_in_guake() {
+    ppid=$(ps -h -o ppid -p $$ 2>/dev/null)
+    ppid_comm=$(ps -h -o comm -p $ppid 2>/dev/null)
+
+    case $ppid_comm in
+        (guake | python2) if command -v tmux>/dev/null; then
+	    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+	    fi
+	    ;;
+    esac
+}
+
+run_tmux_in_guake
+
 # Personal Aliases
 alias scd='cd'
 alias sl='ls'
