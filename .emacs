@@ -1,6 +1,16 @@
 ;; Top level directory for all pacakges
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+;; Add dirtree - Directory navigator. Open using C-j
+(require 'dirtree)
+(require 'tree-mode)
+(require 'windata)
+(autoload 'dirtree "dirtree" "Add a directory to tree view" t)
+(defun dirtree-home ()
+  (interactive)
+  (dirtree "/" t))
+(global-set-key (kbd "C-j") 'dirtree-home)
+
 ;; Auto-Complete and dependencies
 (require 'auto-complete-config)
 (ac-config-default)
@@ -50,7 +60,7 @@
  ;; If there is more than one, they won't work right.
 (put 'erase-buffer 'disabled nil)
 
-;; MELPA
+;; MELPA -- Extremely slow so use with caution
 (when (>= emacs-major-version 24)
   (require 'package)
   (add-to-list 'package-archives
