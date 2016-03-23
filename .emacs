@@ -8,7 +8,11 @@
 (autoload 'dirtree "dirtree" "Add a directory to tree view" t)
 (defun dirtree-home ()
   (interactive)
-  (dirtree "/" t))
+  (dirtree "~/" t)
+  ;; Decrease dirtree by '13' units
+  (execute-kbd-macro (read-kbd-macro "C-u 13 C-x {"))
+  ;; Switch back to editor
+  (execute-kbd-macro (read-kbd-macro "C-x o")))
 (global-set-key (kbd "C-j") 'dirtree-home)
 
 ;; Auto-Complete and dependencies
