@@ -31,7 +31,7 @@ function install-guake ()
 {
     # Clone Guake repo and install
     git clone https://github.com/Guake/guake
-    mv guake ../ && ../guake/dev.sh --install
+    mv guake ../ && cd ../guake && ./dev.sh --install
 }
 
 if [[ $1 == *"update"* ]]; then
