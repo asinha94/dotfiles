@@ -19,6 +19,7 @@ alias sl='ls'
 alias sls='ls'
 alias emacs='emacs -nw'
 alias rm~dr='rm~ --dry-run'
+alias todo='grep -rn TODO'
 
 # Personal functions
 function latest () # Find latest n files in current directory
