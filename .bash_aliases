@@ -79,5 +79,5 @@ function rm~
 # Combination of cdiff and diff
 function diffy ()
 {
-        diff -y "$@" | cdiff
+        colordiff -y "$@" | less -RN
 }
