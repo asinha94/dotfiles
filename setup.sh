@@ -34,10 +34,21 @@ function install-guake ()
     mv guake ../ && cd ../guake && ./dev.sh --install
 }
 
+function install-misc ()
+{
+    # Install miscellansous packages which I sometimes use
+    sudo apt-get -y install colordiff
+}
+
 if [[ $1 == *"update"* ]]; then
     
     # Just copy the config files
     copy-configs
+
+elif [[ $1 == *"guake"* ]]; then
+
+    # Install guake
+    install-guake
 
 else
 
@@ -49,9 +60,9 @@ else
 
     # Copy all the configuration file to home
     copy-configs
-    
-    # Install guake
-    install-guake
+
+    # Install misc stuff
+    install-misc
     
     # TODO: Include zsh and oh-my-zsh stuff after I have settled on a decent looking environment and finally fixed that powerline fonts issue
 

@@ -76,15 +76,8 @@ function rm~
         esac
 
 }
-
-function flash
+# Combination of cdiff and diff
+function diffy ()
 {
-    echo -ne "$@\r"
-    sleep 2
-}
-
-function flash-off
-{
-    echo -e "\n$@"
-    sleep 2
+        diff -y "$@" | cdiff
 }
