@@ -77,8 +77,19 @@ function rm~
         esac
 
 }
-# Combination of cdiff and diff
-function diffy ()
+
+function success-text ()
 {
-        colordiff -y "$@" | less -RN
+        ESC=\\x1b
+        FG=30
+        BG=40
+        BLACK=0
+        RED=1
+        GREEN=2
+        BLACK_BG=$((BG+BLACK))
+        GREEN_FG=$((FG+GREEN))
+        RED_FG=$((FG+RED))
+        BOLD=1
+        CLEAR=$ESC[m
+        echo -e "${ESC}[${BLACK_BG};${GREEN_FG};${BOLD}m$@${CLEAR}"
 }
