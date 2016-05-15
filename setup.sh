@@ -29,9 +29,13 @@ function install-emacs ()
 
 function install-guake ()
 {
-    # Clone Guake repo and install
-    git clone https://github.com/Guake/guake
-    mv guake ../ && cd ../guake && ./dev.sh --install
+    #Try and install with apt-get
+    sudo apt-get install guake ||
+    # Didnt work. Clone Guake repo and install
+    {
+        git clone https://github.com/Guake/guake
+        mv guake ../ && cd ../guake && ./dev.sh --install
+    }
 }
 
 function install-misc ()
