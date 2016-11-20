@@ -1,8 +1,3 @@
-# run tmux on startup. Check is to avoid infinite loop
-if command -v tmux>/dev/null; then
-    [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
-fi
-
 export PATH="$PATH:"/Applications/microchip/xc8/v1.37/bin""
 
 # Source .bash_aliases
