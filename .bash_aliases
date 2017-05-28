@@ -63,6 +63,11 @@ function rm~
 
 }
 
+function scan ()
+{
+        sudo arp-scan --interface=eth0 --localnet
+}
+
 function success-text ()
 {
         ESC=\\x1b
@@ -78,3 +83,4 @@ function success-text ()
         CLEAR=$ESC[m
         echo -e "${ESC}[${BLACK_BG};${GREEN_FG};${BOLD}m$@${CLEAR}"
 }
+
