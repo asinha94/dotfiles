@@ -5,6 +5,11 @@ alias sls='ls'
 alias emacs='emacs -nw'
 alias rm~dr='rm~ --dry-run'
 alias todo='grep -rn TODO'
+alias serve='python -m SimpleHTTPServer'
+
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:$GOROOT/bin
 
 # Personal functions
 function latest () # Find latest n files in current directory
