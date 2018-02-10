@@ -12,6 +12,19 @@ export GOROOT=/usr/local/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:$GOROOT/bin
 
 # Personal functions
+
+function tpadon ()
+{
+        devid=$(xinput list | grep bcm5974 | grep -oP 'id=\K[0-9]+')
+        xinput --set-prop $devid "Device Enabled" 1
+}
+
+function tpadoff ()
+{
+        devid=$(xinput list | grep bcm5974 | grep -oP 'id=\K[0-9]+')
+        xinput --set-prop $devid "Device Enabled" 0
+}
+
 function latest () # Find latest n files in current directory
 {	
 	list=0
