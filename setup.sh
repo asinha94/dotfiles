@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Add any newer doftiles to the list
-FILES=".emacs .emacs.d .bash_aliases .bash_profile .tmux.conf"
+FILES=".emacs .emacs.d .bash_aliases .bash_profile .tmux.conf .zshrc"
 CURRENT_DIR=`pwd`
 
 # Symmolic links
@@ -11,4 +11,4 @@ done
 
 # Install the extra stuff that I need
 sudo apt-get update
-sudo apt-get install -y tmux guake emacs arp-scan
+sudo apt-get install -y tmux guake emacs arp-scan zsh fonts-powerline

@@ -1,8 +1,6 @@
-export PATH="$PATH:"/Applications/microchip/xc8/v1.37/bin""
-
 # Source .bash_aliases
-if [ -f /Users/anu/.bash_aliases ]; then
-    . /Users/anu/.bash_aliases
+if [ -f /Users/asinha/.bash_aliases ]; then
+    . /Users/asinha/.bash_aliases
 fi
 
 # Shit that Mac should really do already
