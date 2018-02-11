@@ -17,6 +17,6 @@ for f in $FILES; do
 done
 
 # Copy agnoster modified theme
-ln -s agnoster.zsh-theme ~/.oh-my-zsh/themes/
+cp -f agnoster.zsh-theme ~/.oh-my-zsh/themes/
 
 
