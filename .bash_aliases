@@ -6,6 +6,7 @@ alias emacs='emacs -nw'
 alias rm~dr='rm~ --dry-run'
 alias todo='grep -rn TODO'
 alias serve='python -m SimpleHTTPServer'
+alias ross='. ~/Documents/Github/polaris/ros/env.sh'
 
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
