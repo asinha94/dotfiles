@@ -6,10 +6,11 @@ alias emacs='emacs -nw'
 alias rm~dr='rm~ --dry-run'
 alias todo='grep -rn TODO'
 alias serve='python -m SimpleHTTPServer'
+alias ross=". ~/Documents/Github/polaris/ros/env.sh"
 
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:$GOROOT/bin
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:$GOROOT/bin:/opt/firefox
 
 # Personal functions
 
@@ -102,3 +103,4 @@ function success-text ()
         echo -e "${ESC}[${BLACK_BG};${GREEN_FG};${BOLD}m$@${CLEAR}"
 }
 
+#source /opt/ros/kinetic/setup.zsh
