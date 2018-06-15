@@ -33,6 +33,8 @@
 
 ;; Convert tabs to spaces
 (setq-default indent-tabs-mode nil)
+(setq tab-width 4)
+(setq-default c-basic-offset 4)
 
 ;; Custom theme (when using the GUI)
 (when window-system (set-frame-size (selected-frame) 150 40))
