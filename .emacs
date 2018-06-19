@@ -15,6 +15,9 @@
   (execute-kbd-macro (read-kbd-macro "C-x o")))
 (global-set-key (kbd "C-j") 'dirtree-home)
 
+(show-paren-mode t)
+(setq show-paren-style 'expression)
+
 ;; Auto-Complete and dependencies
 (require 'auto-complete-config)
 (ac-config-default)
