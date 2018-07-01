@@ -9,6 +9,7 @@ alias serve='python -m SimpleHTTPServer'
 alias ross=". ~/Documents/Github/polaris/ros/env.sh"
 alias sde="~/sde/bin/sde_shell"
 
+export EDITOR='emacs -nw'
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:$GOROOT/bin:/opt/firefox
@@ -85,7 +86,13 @@ function rm~
 
 function scan ()
 {
-        sudo arp-scan --interface=eth0 --localnet
+	if [ $# -ne 1 ]; then
+    	   echo "Provide only 1 argument. check ifconfig for valid interfaces"
+        else
+          sudo arp-scan --interface=$1 --localnet --arpspa 0.0.0.0        
+	fi
+
+        
 }
 
 function success-text ()
