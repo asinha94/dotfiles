@@ -1,6 +1,9 @@
 ;; Top level directory for all pacakges
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
+;; disable symlik prompt
+(setq vc-follow-symlinks t)
+
 ;; Add dirtree - Directory navigator. Open using C-j
 (require 'dirtree)
 (require 'tree-mode)
