@@ -9,3 +9,5 @@ export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 alias la='ls -al'
 alias ll='ls -l'
+
+export PATH="$HOME/.cargo/bin:$PATH"

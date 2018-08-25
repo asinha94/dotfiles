@@ -54,11 +54,6 @@
  '(custom-enabled-themes (quote (wombat)))
  '(inhibit-startup-screen t)
 
-;; SMTP server for sending email, modify as required
- '(send-mail-function (quote smtpmail-send-it))
- '(smtpmail-smtp-server "smtp.rim.net")
- '(smtpmail-smtp-service 25)
-
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
