@@ -16,6 +16,11 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin:$GOROOT/bin:/opt/firefox
 
 # Personal functions
 
+function dsh()
+{
+        docker exec -it "$1" bash
+}
+
 function tpadon ()
 {
         devid=$(xinput list | grep bcm5974 | grep -oP 'id=\K[0-9]+')

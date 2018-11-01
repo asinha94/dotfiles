@@ -13,10 +13,12 @@
   (interactive)
   (dirtree "~/" t)
   ;; Decrease dirtree by '13' units
-  (execute-kbd-macro (read-kbd-macro "C-u 13 C-x {"))
+  (execute-kbd-macro (read-kbd-macro "C-u 7 C-x {"))
   ;; Switch back to editor
   (execute-kbd-macro (read-kbd-macro "C-x o")))
 (global-set-key (kbd "C-j") 'dirtree-home)
+
+(global-set-key (kbd "C-x 4") 'ansi-term)
 
 (show-paren-mode t)
 (setq show-paren-style 'expression)
