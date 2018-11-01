@@ -20,6 +20,15 @@
 
 (global-set-key (kbd "C-x 4") 'ansi-term)
 
+(add-hook 'emacs-startup-hook
+          (lambda ()
+            (split-window-horizontally)
+            (other-window 1)
+            (ansi-term "/bin/bash")
+            (split-window-vertically)
+            (ansi-term "/bin/bash")
+            (other-window 2)))
+
 (show-paren-mode t)
 (setq show-paren-style 'expression)
 
