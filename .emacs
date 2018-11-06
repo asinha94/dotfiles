@@ -25,8 +25,10 @@
             (split-window-horizontally)
             (other-window 1)
             (ansi-term "/bin/bash")
+            (linum-mode -1)
             (split-window-vertically)
             (ansi-term "/bin/bash")
+            (linum-mode -1)
             (other-window 2)))
 
 (show-paren-mode t)
