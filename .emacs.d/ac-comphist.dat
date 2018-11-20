@@ -1,4 +1,14 @@
-((("linum-mode" .
+((("pop-tag-mark" .
+   [0 0 0 0 0 1 0 0 0 0 0 0])
+  ("elpy-mode-map" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("elpy-enable" .
+   [0 0 0 0 0 0 1 0 0 0 0])
+  ("package-initialize" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("package" .
+   [0 0 0 0 0 1 0])
+  ("linum-mode" .
    [0 0 0 1 2 1 1 0 1 0])
   ("join_channel" .
    [0 0 0 0 0 1 0 0 0 0 0 0])
@@ -157,7 +167,7 @@
   ("show-paren-style" .
    [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
   ("setq" .
-   [2 0 0 0])
+   [4 0 0 0])
   ("show-paren-mode" .
    [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
   ("runtime_error" .
@@ -261,11 +271,11 @@
   ("global-set-key" .
    [0 0 0 0 1 0 0 0 0 0 1 0 0 0])
   ("kbd" .
-   [3 0 0])
+   [4 0 0])
   ("wmode" .
    [1 0 0 0 0])
   ("define-key" .
-   [0 0 0 0 0 0 1 0 0 0])
+   [0 0 0 0 0 1 1 0 0 0])
   ("key-translation-map" .
    [0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
   ("select-window" .
@@ -273,4 +283,8 @@
   ("other-window" .
    [1 0 0 0 0 2 0 1 0 0 0 0])
   ("switch-to-next-buffer" .
-   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])))
+   [0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("Elpy" .
+   [1 0 0 0])
+  ("elpy-rpc-python-command" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])))
