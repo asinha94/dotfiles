@@ -1,2 +1,2 @@
 set number
-map! ii <Esc>
+map! hh <Esc>
