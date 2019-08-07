@@ -1,8 +1,12 @@
+
 ;; Top level directory for all pacakges
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 ;; disable symlik prompt
 (setq vc-follow-symlinks t)
+
+;;(load-theme 'forest-blue t)
+
 
 ;; Add dirtree - Directory navigator. Open using C-j
 (require 'dirtree)
@@ -34,12 +38,15 @@
 (show-paren-mode t)
 (setq show-paren-style 'expression)
 
+
+
 ;; elpy
 (package-initialize)
 (elpy-enable)
 (setq elpy-rpc-backend "jedi")
 (setq elpy-rpc-python-command "python3")
 (define-key elpy-mode-map (kbd "M-,") 'pop-tag-mark)
+(setq eldoc-idle-delay 1)
 
 ;; Auto-Complete and dependencies
 (require 'auto-complete-config)
@@ -72,8 +79,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (wombat)))
+ '(custom-safe-themes
+   (quote
+    ("bd51a329aa9b8e29c6cf2c8a8cf136e0d2960947dfa5c1f82b29c9178ad89a27" default)))
  '(inhibit-startup-screen t)
-
  '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.

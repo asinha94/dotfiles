@@ -6,10 +6,16 @@ alias emacs='emacs -nw'
 alias rm~dr='rm~ --dry-run'
 alias todo='grep -rn TODO'
 alias serve='python -m SimpleHTTPServer'
-alias ross=". ~/Documents/Github/polaris/ros/env.sh"
-alias sde="~/sde/bin/sde_shell"
+
 alias acc='$HOME/Documents/github/asos/cc/bin/i686-elf-gcc'
 alias a++='$HOME/Documents/github/asos/cc/bin/i686-elf-g++'
+
+alias psdb='pgcli -h 198.51.231.181 -d psimsdb -U netskrt'
+alias smsdb='pgcli -h 198.51.231.181 -d smsdb -U netskrt'
+alias edge='ssh netskrt@em-ps-ns1.ps.ca.netskrt.org'
+alias ims='ssh netskrt@ps-ims.ps.ca.netskrt.org'
+alias sms='ssh netskrt@ca-sms.ca.netskrt.org'
+
 
 export EDITOR='emacs -nw'
 export GOPATH=$HOME/go
@@ -70,6 +76,11 @@ function updir () # cd Up a number of directories
 	cd $UPDIR
 }
 
+function math() # Do math on the command line
+{
+        printf "%s\n" "$*" | bc
+}
+
 function mkcd ()  # make directory and cd into it
 { 
 	mkdir "$@" && cd "$@" 
@@ -118,4 +129,4 @@ function success-text ()
         echo -e "${ESC}[${BLACK_BG};${GREEN_FG};${BOLD}m$@${CLEAR}"
 }
 
-#source /opt/ros/kinetic/setup.zsh
+

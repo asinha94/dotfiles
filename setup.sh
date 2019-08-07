@@ -12,7 +12,7 @@ pip3 install $PIP_PACKS
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 # Add any newer doftiles to the list
-FILES=".emacs .emacs.d .bash_aliases .bash_profile .tmux.conf .zshrc"
+FILES=".emacs .emacs.d .bash_aliases .bash_profile .tmux.conf .zshrc .vimrc"
 CURRENT_DIR=`pwd`
 
 # Symmolic links
