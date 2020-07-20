@@ -10,13 +10,6 @@ alias serve='python -m SimpleHTTPServer'
 alias acc='$HOME/Documents/github/asos/cc/bin/i686-elf-gcc'
 alias a++='$HOME/Documents/github/asos/cc/bin/i686-elf-g++'
 
-alias psdb='pgcli -h 198.51.231.181 -d psimsdb -U netskrt'
-alias smsdb='pgcli -h 198.51.231.181 -d smsdb -U netskrt'
-alias edge='ssh netskrt@em-ps-ns1.ps.ca.netskrt.org'
-alias ims='ssh netskrt@ps-ims.ps.ca.netskrt.org'
-alias sms='ssh netskrt@ca-sms.ca.netskrt.org'
-
-
 export EDITOR='emacs -nw'
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
