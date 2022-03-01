@@ -10,7 +10,6 @@ alias serve='python -m SimpleHTTPServer'
 alias acc='$HOME/Documents/github/asos/cc/bin/i686-elf-gcc'
 alias a++='$HOME/Documents/github/asos/cc/bin/i686-elf-g++'
 
-export EDITOR='emacs -nw'
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 export PATH="$PATH:/usr/local/go/bin:$GOPATH/bin:$GOROOT/bin:/opt/firefox:$HOME/Documents/github/asos/cc/bin"
